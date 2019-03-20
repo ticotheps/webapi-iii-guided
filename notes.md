@@ -2,7 +2,7 @@
 
 - Why break the API into routers?
     -Code is a communication medium
-    -Minimize the noise and maximize the signal.
+    -Reduce the 'noise' so you can hear the 'signal'.
     -User <-> [Router -- DataAccess API]
     -Think of a 'Router' as a type of component.
     -Router should:
