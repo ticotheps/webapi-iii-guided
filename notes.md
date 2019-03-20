@@ -41,6 +41,7 @@
     -Async/await attempts to give you the illusion of synchronicity without actually being synchronous.
     -i.e 
         ```js
+
         p().then(r1 => {
             // this first
             //
@@ -54,19 +55,49 @@
             });
         }).catch(all errors handle here);
 
+        p().then(r1 => {
+            reutrn p2(r1.one);
+        })
+        .then().then()
+
         try {
             const r1 = await p();
             const r2 = await p2(r1);
         } catch (error) {
             // handle error
         }
-        
+
         try {
             const r3 = await p3(r2);
         } catch (error) {
             // handle special error
         }
+
         ```
 - req.query vs req.body?
+    -req.body is an object that is sent in a message during a request
+    -i.e. 
+        ```js
+
+        cont httpMessage = {
+            headers: {
+                authorization: 'token'
+            },
+            body: {
+                name: 'frodo'
+            }
+        }
+        ```
+    -a query is string
+    -i.e. 
+        ```js
+        
+        query = '?name=sam&race=hobbit';
+
+        req.query = {
+            name: 'sam',
+            race: 'hobbit'
+        }
+        ```
 
 
